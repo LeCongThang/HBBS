@@ -1,0 +1,64 @@
+<div class="carousel-wrapper" id="home-carousel">
+    <div id="transition-timer-carousel" class="carousel slide transition-timer-carousel" data-ride="carousel">
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+
+            <div class="item active">
+                <div id="slidebox-1-inner" class="slidebox no-gutter-xs">
+    			#1
+                </div>
+            </div>
+
+            <div class="item">
+                <div id="slidebox-2-inner" class="slidebox no-gutter-xs">
+				#2
+                </div>
+            </div>
+
+            <div class="item">
+                <div id="slidebox-3-inner" class="slidebox no-gutter-xs">
+				#3
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#transition-timer-carousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#transition-timer-carousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+        <!-- Timer "progress bar"-->
+        <hr class="transition-timer-carousel-left-progress-bar animate" />
+        <hr class="transition-timer-carousel-progress-bar animate" />
+
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#transition-timer-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#transition-timer-carousel" data-slide-to="1" ></li>
+            <li data-target="#transition-timer-carousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Nav bar -->
+
+        <div class="container">
+            <ul class="nav nav-pills nav-justified">
+                <li data-target="#transition-timer-carousel" data-slide-to="0" class="active first-li">
+                    <a href="#">#1</a>
+                </li>
+                <li data-target="#transition-timer-carousel" data-slide-to="1" class="second-li">
+                    <a href="#">#2</a>
+                </li>
+                <li data-target="#transition-timer-carousel" data-slide-to="2" class="third-li">
+                    <a href="#">#3</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>

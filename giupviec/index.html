@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Giup viec</title>
+    <link rel="stylesheet" type="text/css" href="public/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="public/css/default_skin_variation.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+  <style type="text/css">
+    @media only screen and (min-width: 960px) {#portfolio-wrapper img {min-height: 147px;}} 
+    @media only screen and (min-width: 768px) and (max-width: 959px) {#portfolio-wrapper img {min-height: 115px;}}
+</style>
+
+</head>
+<body>
+
+    <!-- Modal -->
+    <div style="margin-top: 80px;z-index: 999999;" class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              
+                <div class="modal-footer">
+                    <div id="nhanviec-form-wrapper" class="text-center">
+                        <h1>Đăng ký nhận việc</h1>
+                        <div class="lien-he">
+                            <p>Điền thông tin vào mẫu bên dưới để trở thành người giúp việc với rất nhiều công việc hấp dẫn hằng ngày</p>
+                        </div>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="full-name" placeholder="Họ và tên" name="full_name">
+                            </div>        
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="email" placeholder="Địa chỉ" name="email">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="full-name" placeholder="Số điện thoại" name="full_name">
+                            </div>        
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="email" placeholder="Số chứng minh nhân dân" name="email">
+                            </div>
+                            
+                            <div class="form-group gui">
+                                <button type="submit" class="btn btn-send-contact">Gửi</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div style="margin-top: 80px;z-index: 999999" class="modal fade" id="dangviec" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="modal-footer">
+                    <div class="phone-mockup-dialog phone-mockup-center-dialog img-responsive t">
+                        <img class="img-responsive" src="public/images/start-screen.jpg" alt="">  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- bat dau heeader menu -->
+    <header id="menu-nav">
+        <div class="navbar navbar-fixed-top" role="banner"> 
+            <div class="container"> 
+                <nav class="navbar navmenu navmenu-default navmenu-fixed-left offcanvas" id="myNavmenu">
+                    <div class="container-fluid navbar-default">
+
+
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand hidden-xs" href="/">
+                                <img class="img-logo hidden-xs hidden-sm" class="img-responsive" src="public/images/logo.png" alt="logo">
+                                
+                            </a>
+                            <div class="visible-sm visible-xs ngon-ngu">
+                                <a class="btn btn-warning btn-language btn-select">
+                                    <input type="hidden" class="btn-select-input" id="" name="" value="" />
+                                    <span class="btn-select-value">Select an Item</span>
+                                    <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
+                                    <ul>
+                                        <li class="selected">Vi</li>
+                                        <li >En</li>
+
+                                    </ul>
+                                </a>
+                            </div> 
+
+                            <div class="visible-xs visible-sm dang-viet">
+                                <a class="postTaskTracking mobileDownload" href="javascript:;">
+                                    <img class="img-logo" class="img-responsive" src="public/images/logo.png" alt="logo">
+                               </a>
+                            </div> 
+                        </div>
+
+                       <div class="collapse navbar-collapse"> 
+                            <ul class="nav navbar-nav">
+                                <li class="scroll"><a class="page-scroll" href="#menu-nav">Trang chủ</a></li> 
+                                <li class="scroll"><a class="page-scroll" href="#text-goithieu-tren">Giới thiệu</a></li> 
+                                <li class="scroll"><a class="page-scroll" href="#download">Tải ứng dụng</a></li>
+                                <li class="scroll"><a class="page-scroll" href="#contact">Liên hệ</a></li>
+                                <li class="scroll hidden-sm hidden-md hidden-lg"><a class="page-scroll" href="#clients">Đăng việc nhanh</a></li>
+                                <li class="scroll hidden-sm hidden-md hidden-lg"><a class="page-scroll" href="#clients">Đăng ký nhận việ</a></li>
+
+                                <li class="scroll hidden-xs hidden-sm"><a id="btn-quick-post" class="navbar-btn dangviec" href="#clients" data-toggle="modal" data-target="#dangviec">Đăng việc nhanh</a></li>
+
+                                <li class="scroll hidden-xs hidden-sm"><a id="btn-quick-post" class="navbar-btn nhanviec" href="#register" data-toggle="modal" data-target="#myModal">Đăng ký nhận việc</a></li> 
+                                <li  class="hidden-xs hidden-sm">
+                                    <a class="btn btn-warning btn-language btn-select">
+                                        <input type="hidden" class="btn-select-input" id="" name="" value="" />
+                                        <span class="btn-select-value">Select an Item</span>
+                                        <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
+                                        <ul>
+                                            <li class="selected">Vi</li>
+                                            <li >En</li>
+                                        </ul>
+                                    </a>
+
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div> 
+                </nav>
+            </div>
+        </div>
+    </header>
+<!-- ket thuc header menu -->
+<!-- bat dau banner -->
+    <section id="banner" class="">
+        <div class="container">
+            <div class="col-md-6 hidden-xs text-center">
+                <div class="phone-banner-left">
+                    <img src="public/images/mobile-banner.jpg" alt="">
+                </div>     
+            </div>
+            <div class="col-xs-12 col-md-6 hidden-xs pull-right text-in-banner">
+                <div class="tile-banner">
+                    <h1><span>Chúng tôi tự hào mang đến cho bạn một ứng dụng giúp việc nhà sử dụng công nghệ tiên tiến nhất.</span></h1>
+                </div>
+
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+                    <div class="carousel-inner text-banner-slider">
+                        <div class="item active">
+                            <div class="text-banner">
+                                <div class="col-md-6 col-sm-6 text-center">
+                                    <div class="icon-banner" >
+                                        <img src="public/images/quetdon.png" alt="">
+                                    </div>
+                                    <div>
+                                        <h3>Dọn dẹp nhà cửa</h3>
+                                        <p>Nhà mát, bát cơm ngon</p>
+                                        <p> Hết việc, không hết giờ</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 text-center">
+                                    <div class="icon-banner" >
+                                        <img src="public/images/nauan.png" alt="">
+                                    </div>
+                                    <div>
+                                        <h3>Nấu ăn</h3>
+                                        <p>Sạch sẽ, ngăn nắp</p>
+                                        <p>Món ngon, tròn vị</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="text-banner">
+                                <div class="col-md-6 col-sm-6">
+
+                                    <h3>Chăm sóc sức khỏe</h3>
+                                    <p>Tận tâm, chuyên nghiệp</p>
+                                    <p>Mạnh khỏe, an vui</p>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <h3>Chăm sóc trẻ</h3>
+                                    <p>Chăm chút, tỉ mỉ</p>
+                                    <p>Đảm bảo dinh dưỡng</p>
+                                    <p>Mỗi ngày bên bé, trọn niềm vui</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="text-banner">
+                                <div class="col-md-6 col-sm-6">
+                                    <h3>Sửa chữa điện, nước</h3>
+                                    <p>Nhanh  chóng, an toàn</p>
+                                    <p>Chất lượng, hiệu quả</p>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <h3>Gia sư</h3>
+                                    <p>Vững kiến thức, giỏi chuyên môn</p>
+                                    <p>Thầy giỏi, trò giỏi!</p>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="item">
+                            <div class="text-banner">
+                                <div class="col-md-6 col-sm-6">
+                                    <h3>Sửa chữa điện lạnh</h3>
+                                    <p>Nhanh  chóng, chuyên nghiệp</p>
+                                    <p>Chất lượng tuyệt đối</p>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <h3>Hệ thống thoát nước</h3>
+                                    <p>An toàn, chu đáo</p>
+                                    <p>Nhanh gọn, hiệu quả</p>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="hidden-lg hidden-md hidden-sm">
+                <div class="phone-mockup phone-mockup-center img-responsive t">
+
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+                        <div class="carousel-inner carousel-inner-banner-mobile">
+                            <div class="item ">
+                                <img src="public/images/home-screen.jpg" alt="">
+                            </div>
+
+                            <div class="item active">
+                                <img class="img-responsive" src="public/images/start-screen.jpg" alt="">
+                            </div>
+
+                            <div class="item">
+                                <img src="public/images/sign-in-screen.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+
+                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+<!-- ket thuc bannser -->
+<!--bat dau gioi thieu-->
+    <section id="text-goithieu-tren" class="">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12 col-xs-12">
+                    <img class="hidden-xs" class="img-responsive" src="public/images/logo.png" width="130" alt="logo">
+                </div>
+                <div class="text-gioithieu col-md-12 col-xs-12">
+                    <p>
+                        Là một ứng dụng giúp việc nhà  hiện đại, được tích hợp công nghệ Nhận diện khuôn mặt (Face Recognition) – một kĩ thuật của AI (Trí tuệ nhân tạo), nhằm mang đến trải nghiệm hoàn toàn mới cho khách hàng.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--bat dau gioi thieu-->
+<!-- bat dau icon-servicer -->
+    <section id="services" class="about-us">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12 col-xs-12">
+
+                    <div class="col-md-4 col-xs-12">
+                        <div class="single-service panel-group" id="single-service-tien-loi">
+
+                            <div class="icon-servicer">
+                                <i data-toggle="collapse" id="icon-tien-loi" href="#tien-loi" class="icon-servicer-detelt fa fa-rocket circle-fa-icon circle-fa-rocket icon-servicer-hover"></i>
+                            </div>
+                            <div class="text-servicer">
+                                <h2>Nhanh chóng - Tiện lợi</h2>
+                                <!-- text cho dien thoai -->
+                                <div id="tien-loi" class="panel-collapse collapse ">
+                                    <p>Chỉ cần đặt trước 2 giờ</p>
+                                    <p>Chỉ với 30s thao tác trên ứng dụng</p>
+                                    <p>Không cần tìm kiếm trên mạng</p>
+                                    <p>Có thể đặt dịch vụ mọi lúc mọi nơi</p>
+                                </div>
+                                <!-- text cho lap top -->
+                                <!-- <div class="hidden-xs">
+                                    <p>Chỉ cần đặt trước 2 giờ</p>
+                                    <p>Chỉ với 30s thao tác trên ứng dụng</p>
+                                    <p>Không cần tìm kiếm trên mạng</p>
+                                    <p>Có thể đặt dịch vụ mọi lúc mọi nơi</p>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <div class="single-service panel-group" id="single-service-an-toan">
+                            <div class="icon-servicer">
+                                <i data-toggle="collapse" id="icon-an-toan" href="#an-toan" class="icon-servicer-detelt fa fa-thumbs-up circle-fa-icon circle-fa-thumbs-up icon-servicer-hover"></i>
+                            </div>
+                            <div class="text-servicer">
+                                <h2>Uy tín - An toàn</h2>
+                                <!-- text cho dien thoai -->
+                                <div id="an-toan" class="panel-collapse collapse ">
+                                    <p>Thông tin, lý lịch rõ ràng</p>
+                                    <p>Có giấy xác nhận hạnh kiểm của địa phương</p>
+                                    <p>Đã hoàn thành quy trình kiểm tra và thử việc</p>
+                                    <p>Hệ thống chỉ giữ lại người giúp việc làm tốt</p>
+                                </div>
+                                <!-- text cho lap top -->
+                                <!-- <div class="hidden-xs">
+                                    <p>Thông tin, lý lịch rõ ràng</p>
+                                    <p>Có giấy xác nhận hạnh kiểm của địa phương</p>
+                                    <p>Đã hoàn thành quy trình kiểm tra và thử việc</p>
+                                    <p>Hệ thống chỉ giữ lại người giúp việc làm tốt</p>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <div class="single-service panel-group" id="single-service-kiem-chung">
+                            <div class="icon-servicer">
+                                <i data-toggle="collapse" id="icon-kiem-chung" href="#kiem-chung" class="icon-servicer-detelt fa fa-trophy circle-fa-icon circle-fa-trophy icon-servicer-hover"></i>
+                            </div>
+                            <div class="text-servicer">
+                                <h2>Chất lượng - Kiểm chứng</h2>
+                                <!-- text cho dien thoai -->
+                                <div id="kiem-chung" class="panel-collapse collapse">
+                                    <p>Hơn 10.000 khách hàng đã sử dụng và hài lòng</p>
+                                    <p>Giá cả vô cùng hợp lý và rõ ràng</p>
+                                    <p>Có nhiều dịch vụ giúp việc nhà khác nhau</p>
+                                    <p>Đội ngũ chăm sóc và hỗ trợ khách hàng tận tình</p>
+                                </div>
+                                <!-- text cho lap top -->
+                                <!-- <div class="hidden-xs">
+                                    <p>Hơn 10.000 khách hàng đã sử dụng và hài lòng</p>
+                                    <p>Giá cả vô cùng hợp lý và rõ ràng</p>
+                                    <p>Có nhiều dịch vụ giúp việc nhà khác nhau</p>
+                                    <p>Đội ngũ chăm sóc và hỗ trợ khác hàng tận tình</p>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--bat dau tinh nang uu viet-->
+    <section id="tinhnang" class="tinhnang hidden-xs">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12 col-xs-12 text">
+                    <h2>Tính năng ưu việt</h2>
+                    <p>Đơn giản - An toàn - Nhanh chóng - Hiệu quả</p>
+
+                </div>
+            </div>
+             <div class="row">
+                <!-- <div class="col-lg-1 hidden-sm hidden-md"></div> -->
+                <div class="col-lg-4 col-md-4 col-sm-4  text-right text-font">
+                    
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                           
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <div class="btnt-left collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Đăng ký nhanh</div>
+                                   
+                                </h4>
+                            </div>
+
+                            <div id="collapse1" class="panel-collapse collapse">
+                                <div class="panel-body"> 
+                                    <div class="text-dang-ky-left">Đơn giản với số điện thoại, hình thẻ và chứng minh nhân dân để tạo tài khoản.</div>
+                                   
+                                </div>
+
+                            </div>
+                        
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <div class="btnt-left collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2">Dịch vụ đa dạng</div>
+                                </div>
+                            </div>
+
+                            <div id="collapse2" class="panel-collapse collapse">
+                                <div class="panel-body"> 
+                                    <div class="text-dang-ky-left">Cung cấp mọi loại hình giúp việc: vệ sinh nhà cửa, nấu ăn, hệ thống điện nước, chăm sóc sức khỏe, gia sư …</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <div class="btnt-left collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3">Theo dõi dịch vụ</div>
+                                </div>
+                            </div>
+
+
+                            <div id="collapse3" class="panel-collapse collapse">
+                                <div class="panel-body"> 
+                                    <div class="text-dang-ky-left">Đối tác có thể theo dõi tình trạng đơn hàng ngay khi bắt đầu đến khi kết thúc công việc.</div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div> 
+
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 text-center">
+                    <div class="text-center">
+                        <div class="phone-mockup-tinhnang phone-mockup-center-tinhnang img-responsive">
+
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+                                <div class="carousel-inner carousel-inner-tinh-nang">
+                                    <div class="item ">
+                                        <img src="public/images/home-screen.jpg" alt="">
+                                    </div>
+
+                                    <div class="item active">
+                                        <img class="img-responsive" src="public/images/start-screen.jpg" alt="">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="public/images/sign-in-screen.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4 text-left  text-font">
+                   
+                    <div class="panel-group" id="accordion1">
+                        <div class="panel panel-default">
+                           
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <div class="btnt-right collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse4">Đảm bảo chất lượng</div>
+                                   
+                                </h4>
+                            </div>
+
+                            <div id="collapse4" class="panel-collapse collapse">
+                                <div class="panel-body"> 
+                                    <div class="text-dang-ky-right">Chúng tôi luôn trực tuyến để đảm bảo chất lượng và hỗ trợ kịp thời mọi vấn đề phát sinh.</div>
+                                   
+                                </div>
+
+                            </div>
+                        
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <div class="btnt-right collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse5">Ứng dụng an toàn</div>
+                                </div>
+                            </div>
+
+                            <div id="collapse5" class="panel-collapse collapse">
+                                <div class="panel-body"> 
+                                    <div class="text-dang-ky-right">Bảo mật thông tin khách hàng; bảo đảm đúng nhân viên làm việc theo hệ thống Nhận diện khuôn mặt (Facial Recognition).</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <div class="btnt-right collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse6">Thanh toán nhanh gọn</div>
+                                </div>
+                            </div>
+
+                            <div id="collapse6" class="panel-collapse collapse">
+                                <div class="panel-body"> 
+                                    <div class="text-dang-ky-right">Khách hàng có thể thanh toán bằng nhiều hình thức như: ký quỹ, thanh toán online, hoặc tiền mặt trực tiếp.</div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+
+                </div>
+               
+            </div>
+        </div>
+    </section>
+<!--kat thuc tinh nang uu viet-->
+<!-- ket thuc icon-servicer -->
+    <section id ="slider-phone" class="hidden-xs">
+        <div class="container">
+            <div class="rows">
+                <div class="text-center hidden-xs">    
+                    <h1 class="tieu-de">Thiết kế hiện đại</h1>
+                    <div class="text-slider">
+                        <p>Từng chi tiết được chăm chút cẩn thận nhằm mang lại trải nghiệm thoải mái nhất cho khách hàng</p>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="phone-mockup phone-mockup-center img-responsive t">
+                        </div>
+                        <div class="sixteen columns">
+                            <div class="project">
+                                <div class="sky-carousel" id="your-carousel-id">
+                                    <div class="sky-carousel-wrapper">
+                                        <ul class="sky-carousel-container">
+
+                                            <li>
+                                             <img src="public/images/home-screen.jpg" alt="">
+
+                                         </li>
+                                         <li>
+                                            <img src="public/images/home-screen.jpg" alt="">
+
+                                        </li>
+
+                                        <li>
+                                            <img class="img-responsive" src="public/images/start-screen.jpg" alt="">
+
+                                        </li>
+
+                                        <li>
+                                            <img src="public/images/home-screen.jpg" alt="">
+
+                                        </li>
+                                        <li>
+                                            <img src="public/images/home-screen.jpg" alt="">
+
+                                        </li>
+
+                                        <li>
+                                            <img class="img-responsive" src="public/images/start-screen.jpg" alt="">
+
+                                        </li>
+                                        <li>
+                                            <img src="public/images/home-screen.jpg" alt="">
+
+                                        </li>
+                                        <li>
+                                            <img src="public/images/home-screen.jpg" alt="">
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>
+<!--bat dau quy trinh-->
+    <section id ="quy-trinh" class="quy-trinh hidden-xs">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12 col-xs-12 text">
+                    <h2>Quy trình thực hiện</h2>
+
+                </div>
+            </div> 
+        </div>
+
+        <div class="carousel-wrapper" id="home-carousel">
+            <div id="transition-timer-carousel" class="carousel slide transition-timer-carousel" data-ride="carousel">
+
+            <!-- Wrapper for slides -->
+                <div class="col-md-5 col-sm-5 text-left">
+                    <div class="phone-mockup-quytrinh phone-mockup-center-quytrinh img-responsive">
+                        <div class="carousel-inner carousel-inner-quy-trinh">
+
+                            <div class="item active">
+                                <div id="slidebox-1-inner" class="slidebox no-gutter-xs">
+                                    <img src="public/images/home-screen.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div id="slidebox-2-inner" class="slidebox no-gutter-xs">
+                                    <img class="img-responsive" src="public/images/start-screen.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div id="slidebox-3-inner" class="slidebox no-gutter-xs">
+                                    <img src="public/images/home-screen.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div id="slidebox-4-inner" class="slidebox no-gutter-xs">
+                                    <img class="img-responsive" src="public/images/start-screen.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div id="slidebox-5-inner" class="slidebox no-gutter-xs">
+                                    <img src="public/images/home-screen.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- Controls -->
+                <!-- <a class="left carousel-control" href="#transition-timer-carousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#transition-timer-carousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a> -->
+
+                <!-- Timer "progress bar"-->
+                <div class="col-md-2 col-sm-2">
+                    <div class="time-bar">
+                       <hr class="transition-timer-carousel-left-progress-bar animate" />
+                       <hr class="transition-timer-carousel-progress-bar animate" />
+                       <!-- Indicators -->
+                       <ol class="carousel-indicators cham">
+                            <li data-target="#transition-timer-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#transition-timer-carousel" data-slide-to="1" ></li>
+                            <li data-target="#transition-timer-carousel" data-slide-to="2" ></li>
+                            <li data-target="#transition-timer-carousel" data-slide-to="3" ></li>
+                            <li data-target="#transition-timer-carousel" data-slide-to="4" ></li>
+                        </ol>
+
+                    <!-- Nav bar -->
+
+                        <div class="container">
+                            <ul style=" margin-top: -5px;
+                            margin-left: -85px;" class="nav nav-pills nav-justified">
+                                <li data-target="#transition-timer-carousel" data-slide-to="0" class="active first-li">
+                                    <a href="#">Đăng ký tài khoản</a>
+                                </li>
+                                <li data-target="#transition-timer-carousel" data-slide-to="1" class="second-li">
+                                    <a href="#">Đăng công việc</a>
+                                </li>
+                                <li data-target="#transition-timer-carousel" data-slide-to="2" class="third-li">
+                                    <a href="#">Chọn người nhận việc</a>
+                                </li>
+                                <li data-target="#transition-timer-carousel" data-slide-to="3" class="Fourth-li">
+                                    <a href="#">Nghiệm thu - Đánh giá</a>
+                                </li>
+                                <li data-target="#transition-timer-carousel" data-slide-to="4" class="Fifth-li">
+                                    <a href="#">Thanh toán</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="text-click text-center">
+                    <p>Để trở thành nhân viên công ty, vui lòng <button class="btn btn-warning btn-click">Click vào đây</button></p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--ket thuc quy trinh-->
+
+<!-- bat dau download -->
+    <section id="download">
+        <div class="container">
+            <div class="row download-row">
+                <div class="col-xs-12 col-ms-12">
+                    <div class="col-md-5 text-center hidden-xs hidden-sm">
+                        <h2>Quét mã QR</h2>
+                        <a href=""><img class="img-responsive qr-code-image" src="public/images/qr-code.jpg" alt=""></a>
+                    </div>
+                    <div class="col-md-2 text-center download-text-or hidden-xs hidden-sm"><h4>Hoặc</h4></div>
+                    <div class="col-md-5 col-xs-12 text-center">
+                        <h2 class="tai-ung-dung">Tải ứng dụng</h2>
+                        <p class="apple"><a class="btn btn-download btn-download-apple" href="">Apple Store</a></p>
+                        <p><a class="btn btn-download btn-download-android" href="">Google Play</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- ket thuc download -->
+<!--y kien khach hang-->
+    <section id="y-kien" class="hidden-xs">
+        <div class="container">
+            <div class="row ykien-row">
+                <div class="text-center col-ms-12">
+                    <h2>Ý kiến khách hàng</h2>
+                </div>
+                <div class="col-md-12" data-wow-delay="0.2s">
+                    <div class="carousel-ykien slide" data-ride="carousel" id="quote-carousel">
+                        <!-- Bottom Carousel Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="">
+                            </li>
+                            <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="https://s3.amazonaws.com/uifaces/faces/twitter/rssems/128.jpg" alt="">
+                            </li>
+                            <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" alt="">
+                            </li>
+                        </ol>
+
+                        <!-- Carousel Slides / Quotes -->
+                        <div class="carousel-inner inner-ykien text-center">
+
+                            <!-- Quote 1 -->
+                            <div class="item active">
+                                <blockquote>
+                                    <div class="row">
+                                        <div class="col-sm-8 col-sm-offset-2">
+
+                                            <p>Tuần trước tôi có sử dụng dịch vụ trên NGV247 để dọn nhà mới, nhân viên làm việc rất nhiệt tình và chu đáo, ngay cả nhà bếp cũng được dọn sạch sẽ. Tôi rất hài lòng với dịch vụ tại NGV247</p>
+                                            <!-- <small>Someone famous</small> -->
+                                        </div>
+                                    </div>
+                                </blockquote>
+                            </div>
+                            <!-- Quote 2 -->
+                            <div class="item">
+                                <blockquote>
+                                    <div class="row">
+                                        <div class="col-sm-8 col-sm-offset-2">
+
+                                            <p>Tôi được chị gái giới thiệu dịch vụ tìm người giúp việc nhà trên NGV247 để chuẩn bị sinh nhật cho con trai. Nhân viên của công ty đến đúng lịch hẹn và làm việc rất chu đáo, thái độ thân thiện. Tôi cảm thấy hài lòng và tin tưởng dịch vụ mà NGV247 mang lại</p>
+                                            <!-- <small>Someone famous</small> -->
+                                        </div>
+                                    </div>
+                                </blockquote>
+                            </div>
+                            <!-- Quote 3 -->
+                            <div class="item">
+                                <blockquote>
+                                    <div class="row">
+                                        <div class="col-sm-8 col-sm-offset-2">
+
+                                            <p>Tôi không có thời gian chăm sóc nhà cửa nên quyết định thuê người giúp việc nhà theo tháng. Tôi tìm thấy dịch vụ cung ứng người giúp việc nhà trên NGV247 trên Google. Ban đầu khá hoang mang trong việc đăng ký dịch vụ nhưng sau khi trải nghiệm dịch vụ của công ty, các nhân viên của NGV247 đã làm cho tôi hoàn toàn hài lòng và tin tưởng</p>
+                                            <!-- <small>Someone famous</small> -->
+                                        </div>
+                                    </div>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <!-- Carousel Buttons Next/Prev -->
+                        <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+                        <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+<!--bat dau thong ke-->
+    <section id="thongke" class="thongke hidden-xs">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12 col-xs-12">
+                    <div class="text-thongke">
+                        <h2>Thống kê</h2>
+                    </div>
+                    <div class="col-md-3 col-xs-12">
+                        <div class="single-service">
+
+                            <div class="icon-servicer">
+                                <i class="fa fa-user-plus circle-fa-icon circle-fa-rocket"></i>
+                            </div>
+                            <div class="text-thongke">
+
+                                <div class="counter so" data-count="100000">0</div>
+                                
+                                <div class="hidden-xs">
+                                    <h2>Khách hàng</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12">
+                        <div class="single-service">
+                            <div class="icon-servicer">
+                                <i class="fa fa-pencil-square-o circle-fa-icon circle-fa-thumbs-up "></i>
+                            </div>
+                            <div class="text-thongke">
+                               <div class="counter so" data-count="100000">0 +</div>
+
+                               <div class="hidden-xs">
+                                   <h2>Công việc đã đăng</h2>
+                               </div>
+                           </div>
+                       </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12">
+                        <div class="single-service">
+                            <div class="icon-servicer">
+                                <i class="fa fa-users circle-fa-icon circle-fa-trophy"></i>
+                            </div>
+                            <div class="text-thongke">
+                               <div class="counter so" data-count="100000">0</div>
+
+                               <div class="hidden-xs">
+                                   <h2>Công việc đã nhận</h2>
+                               </div>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12">
+                        <div class="single-service">
+                            <div class="icon-servicer">
+                                <i class="fa fa-heart circle-fa-icon circle-fa-trophy"></i>
+                            </div>
+                            <div class="text-thongke">
+
+                                <div class="counter so" data-count="100000">0</div>
+
+
+                                <div class="hidden-xs">
+                                   <h2>Khách hàng hài lòng</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- bat dau lien he -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div id="contact-form-wrapper" class="text-center">
+                    <h1>Liên hệ với chúng tôi</h1>
+                    <div class="lien-he">
+                        <p>Chúng tôi luôn sẵn sàng hỗ trợ bạn. Nếu có thắc mắc hay khó khăn trong quá trình sử dụng, hãy liên hệ với chúng tôi!</p>
+                    </div>
+                    <form id="contact-form">
+                        <div class="form-group form-group-left">
+                            <input type="text" class="form-control" id="full-name" placeholder="Họ và tên" name="full_name">
+                        </div>        
+                        <div class="form-group form-group-right">
+                            <input type="text" class="form-control" id="email" placeholder="Email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="message" rows="10" placeholder="Nội dung" name="message"></textarea>
+                        </div>
+                        <div class="form-group gui">
+                            <button type="submit" class="btn btn-send-contact">Gửi</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- ket thuc lien he -->
+<!-- bat dau footer -->
+    <footer>
+        <!-- bat dau footer man hinh dien thoai -->
+        <div class="hidden-lg hidden-md hidden-sm">
+            <div class="panel-group">
+                <div class="container">
+                    <div class="">
+                        <a class="" href="/"><img class="img-logo-footer" class="img-responsive" src="public/images/logo.png" alt="logo"></a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="panel-group">
+                <div class="container">
+                    <div class="">
+                        <h4 class="">
+                            <p data-toggle="collapse" href="#gioi-thieu">Giới thiệu<i class="fa fa-sort-desc pull-right" aria-hidden="true"></i></p>
+                        </h4>
+                    </div>
+                    <div id="gioi-thieu" class="panel-collapse collapse">
+                        <p><a class="top-footer-anchor-color" href="">Giới thiệu ứng dụng</a></p>
+                        <p><a class="top-footer-anchor-color" href="">Thông tin công ty</a></p>
+                        <p><a class="top-footer-anchor-color" href="">Tuyển dụng</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-group">
+                <div class="container">
+                    <div class="">
+                        <h4 class="">
+                            <p data-toggle="collapse" href="#ho-tro">Hỗ trợ khách hàng <i class="fa fa-sort-desc pull-right" aria-hidden="true"></i></p>
+                        </h4>
+                    </div>
+                    <div id="ho-tro" class="panel-collapse collapse">
+                        <p><a class="top-footer-anchor-color" href="">Quy định chung</a></p>
+                        <p><a class="top-footer-anchor-color" href="">Điều khoản sử dụng</a></p>
+                        <p><a class="top-footer-anchor-color" href="">Chính sách bảo mật thông tin</a></p>
+                        <p><a class="top-footer-anchor-color" href="">Câu hỏi thường gặp</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-group">
+                <div class="container">
+                    <div class="">
+                        <h4 class="">
+                            <p data-toggle="collapse" href="#lien-he">Thông tin liên hệ <i class="fa fa-sort-desc pull-right" aria-hidden="true"></i></p>
+                        </h4>
+                    </div>
+                    <div id="lien-he" class="panel-collapse collapse">
+                        <p><a class="top-footer-anchor-color" href="">Lầu 3, Tòa nhà Jabes<br>244 Cống Quỳnh, Quận 1<br>Tp Hồ Chí Minh, Việt Nam</a></p>
+                        <p><a class="top-footer-anchor-color" href="">info@hbbsolution.com</a></p>
+                        <p><a class="top-footer-anchor-color" href="">(+84) 8 225 324 89</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-group">
+                <div class="container">
+                    <div class="icon-footer">
+                        <a href=""><i class="facebook fa fa-facebook"></i></a>
+                        <a href=""><i class="google fa fa-google"></i></a>
+                        <a href=""><i class="youtube fa fa-youtube-play"></i></a>
+                    </div>
+                    <div class="coppyringht col-xs-12">Copyright &copy; 2017 NGV247. All rights reserved.</div>
+                </div>
+            </div>
+        </div>
+            <!-- bat dau footer nam hinh lap top va ipab -->
+        <div class="container hidden-xs">
+            <div class="top-footer row">
+                <div class="col-md-12 col-xs-12">
+                    <div class="col-md-3 col-sm-4">
+                        <a class="" href="/"><img class="img-logo-footer" class="img-responsive" src="public/images/logo.png" alt="logo"></a>
+                        <div class="sologan-logo-footer">
+                            <i><p>"Đối tác thêm việc, thêm lợi ích. Khách hàng bớt việc, trọn ngày vui."</p></i>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4">
+                        <h3>Giới thiệu</h3>
+                        <p><a class="top-footer-anchor-color" href="">Giới thiệu ứng dụng</a></p>
+                        <p><a class="top-footer-anchor-color" href="">Thông tin công ty</a></p>
+                        <p><a class="top-footer-anchor-color" href="">Tuyển dụng</a></p>
+                    </div>
+                    
+                    <div class="col-md-3 col-sm-4">
+                        <h3>Hỗ trợ khách hàng</h3>
+                        <p><a class="top-footer-anchor-color" href="">Quy định chung</a></p>
+                        <p><a class="top-footer-anchor-color" href="">Điều khoản sử dụng</a></p>
+                        <p><a class="top-footer-anchor-color" href="">Chính sách bảo mật thông tin</a></p>
+                        <p><a class="top-footer-anchor-color" href="">Câu hỏi thường gặp</a></p>
+                    </div>
+                    <div class="col-md-3 col-sm-12 contact-info hidden-sm">
+                        <h3 class="thong-tin">Thông tin liên hệ</h3>
+                        <div class="text-thong-tin">
+                            <p><a class="top-footer-anchor-color contact-address" href="">Lầu 3, Tòa nhà Jabels<br>244 Cống Quỳnh, Quận 1<br>Tp Hồ Chí Minh, Việt Nam</a></p>
+                        </div>
+                        <div class="text-thong-tin">
+                            <p><a class="top-footer-anchor-color contact-email" href="">info@hbbsolution.com</a></p>
+                        </div>
+                        <div class="text-thong-tin">
+                            <p><a class="top-footer-anchor-color contact-phone" href="">(+84) 8 225 324 89</a></p>
+                        </div>
+                    </div>
+                    <!-- thong tin man hinh tablet -->
+                    <div class="col-md-3 col-sm-12 contact-info hidden-md hidden-xs hidden-lg">
+                        <h3 class="thong-tin">Thông tin liên hệ</h3>
+                        <div class="col-sm-4">
+                            <div class="icon-footer-tablet"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                            <p><a class="top-footer-anchor-color" href="">Lầu 3, Tòa nhà Jabes<br>244 Cống Quỳnh, Quận 1<br>Tp Hồ Chí Minh, Việt Nam</a></p>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="icon-footer-tablet"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                            <p><a class="top-footer-anchor-color" href="">info@hbbsolution.com</a></p>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="icon-footer-tablet"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                            <p><a class="top-footer-anchor-color" href="">(+84) 8 225 324 89</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-footer hidden-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="col-xs-6">
+                            Copyright &copy; 2017 NGV247. All rights reserved.
+                            <div class="col-xs-12 col-md-6 text-center Designed">Designed by<a href="https://hbbsolution.com/"> HBB Solutions.</a></div>
+                        </div>
+                        <div class="col-xs-6 text-right icon-mang-xa-hoi">
+
+                            <a href="#"><i class="icon facebook fa fa-facebook"></i></a>
+                            <a href="#"><i class="icon google fa fa-google"></i></a>
+                            <a href="#"><i class="icon youtube fa fa-youtube-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="public/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script></script>
+    <script src="public/js/index.min.js"></script>
+    <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="public/js/jquery.sky.carousel-1.0.2.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('.sky-carousel').carousel({
+                autoSlideshow:true,
+                autoSlideshowDelay:3,
+                // itemWidth: 300,
+                //  itemHeight: 100,
+                distance: 15,
+                selectedItemDistance: 30,
+                selectedItemZoomFactor: 1,
+                unselectedItemZoomFactor: 0.67,
+                unselectedItemAlpha: 0.4,
+                motionStartDistance: 200,
+                topMargin: 119,
+                gradientStartPoint: 0.35,
+                gradientOverlayColor: "#f5f5f5",
+                gradientOverlaySize: 190,
+                reflectionDistance: 1,
+                reflectionAlpha: 0.35,
+                reflectionVisible: false,
+
+                selectByClick: true,
+                preload: true,
+                showPreloader:   true
+            });
+
+            $('#your-carousel-id').carousel({
+                itemWidth: 200, // The width of your images.
+                itemHeight: 350 // The height of your images.
+            });
+        });
+    </script>
+    <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-39161546-1']);
+          _gaq.push(['_setDomainName', 'skyplugins.com']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+    <script type="text/javascript">
+        // http://kenwheeler.github.io/slick/
+        // $(document).ready(function(){
+        //     $('.slider').slick({
+        //         infinite: true,
+        //         autoplay: true,
+        //         // arrows: false,
+        //         slidesToShow: 3,
+        //         slidesToScroll: 3
+        //     });
+        // });
+    </script>
+    <script>
+        $(document ).ready(function() {
+
+            $('.dangviec').click(function(){
+               $('#myModal').modal('hide');;
+           });
+            $('.nhanviec').click(function(){
+               $('#dangviec').modal('hide');;
+           });
+        });
+
+         $(document ).ready(function() {
+
+            $('#single-service-tien-loi').hover(function(){
+
+               
+
+               if($('#single-service-tien-loi').hasClass('panel-group-gioi-thieu'))
+               {
+                    $('#single-service-tien-loi').removeClass('panel-group-gioi-thieu');
+               }
+               else{
+                $(this).addClass('panel-group-gioi-thieu');
+               }
+           });
+
+            $('#single-service-an-toan').hover(function(){
+
+               
+
+               if($('#single-service-an-toan').hasClass('panel-group-gioi-thieu'))
+               {
+                    $('#single-service-an-toan').removeClass('panel-group-gioi-thieu');
+               }
+               else{
+                $(this).addClass('panel-group-gioi-thieu');
+               }
+           });
+
+            $('#single-service-kiem-chung').hover(function(){
+
+               
+
+               if($('#single-service-kiem-chung').hasClass('panel-group-gioi-thieu'))
+               {
+                    $('#single-service-kiem-chung').removeClass('panel-group-gioi-thieu');
+               }
+               else{
+                $(this).addClass('panel-group-gioi-thieu');
+               }
+           });
+            
+        });
+
+    </script>
+
+    <script type="text/javascript">
+
+        $( window ).scroll(function() {
+            if($(window).scrollTop()>=4000){
+                $('.counter').each(function() {
+                    var $this = $(this),
+                    countTo = $this.attr('data-count');
+
+                $({ countNum: $this.text()}).animate({
+                    countNum: countTo
+                },
+
+                {
+
+                duration: 3000,
+                easing:'linear',
+                step: function() {
+                $this.text(Math.floor(this.countNum));
+                },
+                complete: function() {
+                      $this.text(this.countNum);
+                        // alert('finished');
+                }
+
+            });  
+
+
+
+            });
+
+         }
+
+     });
+
+
+        var totalSteps = 4;
+
+        $('#myCarousel').carousel();
+        $('#myCarousel').on('slide.bs.carousel', function (e) {
+
+  //update progress
+  var step = $(e.relatedTarget).data('step');
+  var percent = (parseInt(step) / totalSteps) * 100;
+  
+  $('.progress-bar').css({width: percent + '%'});
+  $('.progress-bar').text("Step " + step);
+  
+})
+
+
+$('.single-service').hover(
+  function() {
+   // alert(12);
+    $(this).children('.text-servicer').children('.collapse').collapse('show');
+  }, function() {
+    $(this).children('.text-servicer').children('.collapse').collapse('hide');
+  }
+);
+</script>
+
+</body>
+</html>

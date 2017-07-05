@@ -1,0 +1,21 @@
+{
+    "name": "hbb/proimage",
+    "description": "ProImage",
+    "authors": [
+        {
+            "name": "Vy Phan",
+            "email": "nhatvy2015@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+		"phpmailer/phpmailer": "~6.0",
+        "phpoffice/phpexcel": "^1.8",
+        "gregwar/image": "2.*"
+	},
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    }
+}

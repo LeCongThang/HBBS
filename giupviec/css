@@ -1,0 +1,141 @@
+@font-face {
+    font-family:"AvenirLTStdRoman";
+    font-style:normal;
+    font-weight:normal;
+    src:url("/font/AvenirLTStd-Roman.eot");
+    src:url("/font/AvenirLTStd-Roman.eot?#iefix") format("embedded-opentype"),
+        url("/font/AvenirLTStd-Roman.woff") format("woff"),
+        url("/font/AvenirLTStd-Roman.ttf") format("truetype"),
+        url("/font/AvenirLTStd-Roman.svg#AvenirLTStdRoman") format("svg");
+}
+
+
+.carousel-wrapper {background:#fff;overflow: hidden;}
+.transition-timer-carousel .carousel-caption {
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    text-align: left;
+    padding-top: 5px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.transition-timer-carousel .carousel-caption .carousel-caption-header {margin-top: 10px;font-size: 24px;}
+.transition-timer-carousel .carousel-indicators {bottom: 0;margin-bottom: 0;}
+.transition-timer-carousel .carousel-control {z-index: 11;}
+
+/* progress bar */
+.transition-timer-carousel .transition-timer-carousel-progress-bar {
+    display: block;
+    height: 3px;
+    background-color: #34495e;
+    width: 0%;
+    margin: 0;
+    border: none;
+    z-index: 11;
+    position: absolute;
+}
+.transition-timer-carousel .transition-timer-carousel-left-progress-bar {
+    display: block;
+    height: 3px;
+    background-color: #34495e;
+    width: 0;
+    margin: 0;
+    border: none;
+    z-index: 11;
+    left: -15%;
+    position: absolute;
+}
+.transition-timer-carousel .transition-timer-carousel-progress-bar.animate, .transition-timer-carousel .transition-timer-carousel-left-progress-bar.animate{
+    /* We make the transition time shorter to avoid the slide transitioning
+    before the timer bar is "full" - change the 4.25s here to fit your
+    carousel's transition time */
+    -webkit-transition: width 4.25s linear;
+    -moz-transition: width 4.25s linear;
+    -ms-transition: width 4.25s linear;
+    -o-transition: width 4.25s linear;
+    transition: width 4.25s linear;
+}
+.transition-timer-carousel .transition-timer-carousel-left-progress-bar.stopanimation, .transition-timer-carousel .transition-timer-carousel-progress-bar.stopanimation{
+    /* class to fix IE bug that make transition continue even when you remove the class .animate */
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+.carousel-inner>.item>img{display: block;}
+.transition-timer-carousel .carousel-caption {display: block;position: absolute;}
+
+/* Slides specific settings */
+.slidebox{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    min-height: 302px;
+}
+#slidebox-1-inner{
+    background-color: #999;
+}
+#slidebox-2-inner{
+    background-color: #888;
+}
+#slidebox-3-inner{
+    background-color: #777;
+}
+
+/* Nav */
+.transition-timer-carousel .nav a {
+    color: #767676;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-top: 26px;
+    font-size: 14px;
+}
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:hover,
+.nav-pills>li.active>a:focus,
+.nav>li>a:focus, .nav>li>a:hover{color:#34495e;background: none;}
+.nav-pills>li{
+    cursor: pointer;
+    width: 33%;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+.nav-pills>li.active{font-weight: bold;}
+#home-carousel  ul.nav{margin: 0;}
+
+/* indicators through ::before .nav-pills>li.active */
+.nav-pills>li::before{
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: inline-block;
+    content: '';
+    left:0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    margin-top: -27px;;
+    height: 55px;
+    width: 55px;
+    background:#b4b4b4;
+    z-index: 12;
+}
+.nav-pills>li.active::before, .nav-pills>li.active>a::before, .nav-pills>li.active>a:hover::before, .nav-pills>li.active>a:focus::before, .nav>li>a:focus::before, .nav>li>a:hover::before, .nav-pills>li:hover::before {
+    background:#34495e;
+}
+
+
+@media (min-width: 768px) {
+    .carousel-control, .carousel-indicators{display: none;}
+}
+
+@media (max-width:767px) {
+    ul.nav{display: none;}
+    .transition-timer-carousel .transition-timer-carousel-progress-bar,
+    .transition-timer-carousel .transition-timer-carousel-left-progress-bar{display: none;}
+}
