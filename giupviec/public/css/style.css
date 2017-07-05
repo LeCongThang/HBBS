@@ -522,12 +522,12 @@ audio, canvas, progress, video {
 /*---------------------------Tinh Nang Uu Viet--------------------*/
 
 .tinhnang {
-     /*background: -ms-linear-gradient(right bottom, #cc0000 30%, #330000 70%),url(../images/banner-phone.jpg) no-repeat center;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/banner-phone.jpg) no-repeat center;
     min-height: 790px;
     padding-top: 40px;
-    background-size: cover;*/
-      background-color: #1a82f7;
-       background: -webkit-gradient(linear,right bottom,left top top,color-stop(0.3, #cc0000),color-stop(0.7, #330000));
+    background-size: cover;
+     /* background-color: #1a82f7;
+       background: -webkit-gradient(linear,right bottom,left top top,color-stop(0.3, #cc0000),color-stop(0.7, #330000));*/
 }
 .tinhnang p {
     font-size: 16px;
