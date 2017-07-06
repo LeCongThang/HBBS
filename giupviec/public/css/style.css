@@ -233,7 +233,7 @@ body {
 }
 
 .text p {
-    padding-top: 15px;
+    /* padding-top: 15px; */
 }
 .phone-banner-center {
     background-size: 340px 400px !important;
@@ -259,7 +259,8 @@ body {
 }
 
 .text-font h2 {
-    font-size: 22px;
+    font-size: 10px;
+	font-weight:bold;
 }
 .text-font {
     padding-top: 40px;
@@ -522,15 +523,15 @@ audio, canvas, progress, video {
 /*---------------------------Tinh Nang Uu Viet--------------------*/
 
 .tinhnang {
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/banner-phone.jpg) no-repeat center;
-    min-height: 790px;
+    background: url(../images/banner-phone.jpg) no-repeat center;
+    min-height: 900px;
     padding-top: 40px;
     background-size: cover;
      /* background-color: #1a82f7;
        background: -webkit-gradient(linear,right bottom,left top top,color-stop(0.3, #cc0000),color-stop(0.7, #330000));*/
 }
 .tinhnang p {
-    font-size: 16px;
+    font-size: 8px;
 }
 .text-left-tinh-nang {
     padding-bottom: 15px;
@@ -539,7 +540,7 @@ audio, canvas, progress, video {
     padding-bottom: 15px;
 }
 .phone-mockup-tinhnang {
-    position:absolute;
+    /* position:absolute; */
     background-image: url(../images/ip6.png);
     background-repeat: no-repeat;
     z-index: 9999;
@@ -570,12 +571,12 @@ audio, canvas, progress, video {
     height: 50px;
     position: relative;
 }
-#accordion {
+/* #accordion {
     margin-top: 80px;
 }
 #accordion1 {
     margin-top: 80px;
-}
+} */
 .panel-body {
     padding: 0px;
 }
@@ -901,6 +902,7 @@ footer {
     /*text-align: center;*/
     margin-bottom: 0px; 
     padding: 10px 0px;
+	margin-right:-50px;
 }
 .top-footer {
     padding: 75px 0;
