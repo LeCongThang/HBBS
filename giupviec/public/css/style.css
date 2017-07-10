@@ -2092,3 +2092,26 @@ footer {
     .transition-timer-carousel .transition-timer-carousel-progress-bar,
     .transition-timer-carousel .transition-timer-carousel-left-progress-bar{display: none;}
 }
+
+
+/*style banner*/
+
+#accordion span{
+	    border: 1px #eee solid;
+    padding: 8px;
+    padding-top: 6px;
+    padding-bottom: 7px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #fff;
+	cursor: pointer;
+}
+#accordion span i{
+	   color:#1999ce;
+}
+#accordion span.active{
+    background-color: #1999ce;
+}
+#accordion span.active i{
+	   color:#fff;
+}
