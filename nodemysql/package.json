@@ -1,0 +1,18 @@
+{
+  "name": "nodemysql",
+  "version": "1.0.0",
+  "description": "demo node js connect mýql",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Le Cong Thang",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.12.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4"
+  }
+}
